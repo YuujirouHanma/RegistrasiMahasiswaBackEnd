@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi Mahasiswa Baru - Teknik Informatika</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>REGISTRASI MAHASISWA BARU</h1>
+            <h2>Departemen Teknik Informatika</h2>
+        </header>
+        
+        <main class="main-layout">
+            <!-- Form Section -->
+            <section class="form-container">
+                <h3>Formulir Pendaftaran</h3>
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tahunLahir">Tahun Kelahiran</label>
+                        <input type="number" id="tahunLahir" name="tahunLahir" min="1900" max="2023" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="alamat">Alamat</label>
+                        <textarea id="alamat" name="alamat" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Jenis Kelamin</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="jenisKelamin" value="Laki-laki" required> Laki-laki</label>
+                            <label><input type="radio" name="jenisKelamin" value="Perempuan"> Perempuan</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="jurusan">Jurusan</label>
+                        <select id="jurusan" name="jurusan" required>
+                            <option value="">Pilih Jurusan</option>
+                            <option value="Teknik Komputer">Teknik Komputer</option>
+                            <option value="Sistem Informasi">Sistem Informasi</option>
+                            <option value="Ilmu Komputer">Ilmu Komputer</option>
+                            <option value="Teknologi Informasi">Teknologi Informasi</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Daftar</button>
+                </form>
+            </section>
+            
+            <!-- Data Section -->
+            <section class="data-container">
+                <div class="data-header">
+                    <h3>Data Mahasiswa Terdaftar</h3>
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Cari mahasiswa...">
+                        <button id="searchBtn">Cari</button>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table id="mahasiswaTable">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>Umur</th>
+                                <th>Jenis Kelamin</th>
+                                <th>Jurusan</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data akan diisi oleh JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Edit Modal -->
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3>Edit Data Mahasiswa</h3>
+                <form id="editForm">
+                    <input type="hidden" id="editId">
+                    <div class="form-group">
+                        <label for="editNama">Nama</label>
+                        <input type="text" id="editNama" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editTahunLahir">Tahun Lahir</label>
+                        <input type="number" id="editTahunLahir" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editAlamat">Alamat</label>
+                        <textarea id="editAlamat" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Jenis Kelamin</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="editJenisKelamin" value="Laki-laki" required> Laki-laki</label>
+                            <label><input type="radio" name="editJenisKelamin" value="Perempuan"> Perempuan</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="editJurusan">Jurusan</label>
+                        <select id="editJurusan" required>
+                            <option value="">Pilih Jurusan</option>
+                            <option value="Teknik Komputer">Teknik Komputer</option>
+                            <option value="Sistem Informasi">Sistem Informasi</option>
+                            <option value="Ilmu Komputer">Ilmu Komputer</option>
+                            <option value="Teknologi Informasi">Teknologi Informasi</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-submit">Simpan Perubahan</button>
+                </form>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2023 Departemen Teknik Informatika</p>
+        </footer>
+    </div>
+    
+    <script src="api.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
