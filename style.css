@@ -1,0 +1,217 @@
+/* === General Reset === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* === Color Palette ===
+   Coklat tua  : #4E342E
+   Coklat muda: #8D6E63
+   Beige      : #F5F5DC
+   Putih krem : #FAF3E0
+   Aksen gold : #D2B48C
+*/
+
+body {
+    background-color: #FAF3E0;
+    color: #4E342E;
+}
+
+/* === Container === */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* === Header === */
+header {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #8D6E63;
+    color: white;
+    border-radius: 12px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+}
+
+header h2 {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+/* === Layout === */
+.main-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* === Form Section === */
+.form-container {
+    flex: 1;
+    background-color: #F5F5DC;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(78, 52, 46, 0.2);
+}
+
+.form-container h3 {
+    margin-bottom: 20px;
+    color: #4E342E;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #8D6E63;
+    border-radius: 6px;
+    background-color: #fffaf0;
+    color: #4E342E;
+}
+
+.radio-group label {
+    margin-right: 15px;
+}
+
+.btn-submit {
+    padding: 10px 20px;
+    background-color: #8D6E63;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #4E342E;
+}
+
+/* === Data Section === */
+.data-container {
+    flex: 2;
+    background-color: #F5F5DC;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(78, 52, 46, 0.2);
+}
+
+.data-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-container input {
+    padding: 8px;
+    border: 1px solid #8D6E63;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.search-container button {
+    padding: 8px 12px;
+    background-color: #D2B48C;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: #4E342E;
+}
+
+.search-container button:hover {
+    background-color: #8D6E63;
+    color: white;
+}
+
+/* === Table === */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table thead {
+    background-color: #8D6E63;
+    color: white;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #fffaf0;
+}
+
+table tbody tr:hover {
+    background-color: #f1e4d1;
+}
+
+/* === Modal === */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #FAF3E0;
+    margin: 5% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.close-modal {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+    color: #8D6E63;
+}
+
+.close-modal:hover {
+    color: #4E342E;
+}
+
+/* === Footer === */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+    color: #8D6E63;
+    border-top: 1px solid #8D6E63;
+}
